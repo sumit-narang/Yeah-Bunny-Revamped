@@ -1,2 +1,691 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scene id="id391099" GSCVersion="1.25.95" PGFVersion="0.25"><layers><layer id="id537192"><actors><actor id="id707780" prototype="id926139"><attributes><point id="position"><real id="x">667</real><real id="y">189.5</real></point><size id="size"><real id="width">2668</real><real id="height">375</real></size></attributes><aspects/></actor><actor id="id165350" prototype="id200768"><attributes><point id="position"><real id="x">557</real><real id="y">42</real></point><size id="size"><real id="width">1116</real><real id="height">88</real></size></attributes><aspects><graphics><attributes><integer id="tileWidth">100</integer><integer id="tileHeight">100</integer></attributes></graphics></aspects></actor><actor id="id893087" prototype="id593515"><attributes><point id="position"><real id="x">535</real><real id="y">293</real></point></attributes><aspects/></actor><actor id="id334223" prototype="id817068"><attributes><point id="position"><real id="x">-14</real><real id="y">402.5</real></point><size id="size"><real id="width">62</real><real id="height">41</real></size></attributes><aspects><graphics><attributes><integer id="tileWidth">100</integer><integer id="tileHeight">100</integer></attributes></graphics></aspects><behaviors><behavior enabled="true" id="id275607" class="RuleBehavior"><attributes><text id="name">Rule</text><text id="bundleName">Rule.behavior</text><boolean id="runOnce">false</boolean><boolean id="runSequentially">false</boolean><real id="compoundConditionKind">0</real></attributes><conditions><condition id="id798505" pluginPredicateTypeIndex="0" eventType="mouse position"><attributes><index id="conditionType">1</index><text id="subjectAttribute">game.attributes.id129170</text></attributes><predicate type="boolean"><attributes><index id="RHS">1</index></attributes></predicate></condition></conditions><behaviors><behavior id="id659951" class="ChangeAttributeAction" enabled="true"><attributes><text id="name">Change Attribute</text><text id="bundleName">ChangeAttribute.behavior</text><text id="targetAttribute">self.attributes.id800410</text><text id="RHS">2</text></attributes></behavior><behavior id="id795243" class="TimerBehavior" enabled="true"><attributes><text id="name">Timer</text><text id="bundleName">Timer.behavior</text><boolean id="runOnce">false</boolean><boolean id="runSequentially">false</boolean><index id="timerType">0</index><real id="interval">0.01</real><boolean id="runToCompletion">false</boolean></attributes><behaviors><behavior id="id193787" class="ChangeAttributeAction" enabled="true"><attributes><text id="name">Change Attribute</text><text id="bundleName">ChangeAttribute.behavior</text><text id="targetAttribute">self.attributes.id800410</text><text id="RHS"><expression><string xml:space="preserve">-1*</string><reference keypath="self.attributes.id800410"/></expression></text></attributes></behavior><behavior id="id486845" class="ChangeAttributeAction" enabled="true"><attributes><text id="name">Change Attribute</text><text id="bundleName">ChangeAttribute.behavior</text><text id="targetAttribute">scene.attributes.camera.origin.x</text><text id="RHS"><expression><reference keypath="self.attributes.id800410"/></expression></text></attributes></behavior></behaviors></behavior><behavior id="id945343" class="TimerBehavior" enabled="true"><attributes><text id="name">Timer</text><text id="bundleName">Timer.behavior</text><boolean id="runOnce">false</boolean><boolean id="runSequentially">false</boolean><index id="timerType">0</index><real id="interval">0.5</real><boolean id="runToCompletion">true</boolean></attributes><behaviors><behavior id="id262171" class="ChangeAttributeAction" enabled="true"><attributes><text id="name">Change Attribute</text><text id="bundleName">ChangeAttribute.behavior</text><text id="targetAttribute">game.attributes.id129170</text><text id="RHS">false</text></attributes></behavior></behaviors></behavior></behaviors><elseBehaviors/></behavior></behaviors></actor><actor id="id466557" prototype="id148339"><attributes><point id="position"><real id="x">104</real><real id="y">219</real></point></attributes><aspects/></actor><actor id="id764044" prototype="id200768"><attributes><point id="position"><real id="x">536.5</real><real id="y">138.5</real></point><size id="size"><real id="width">255</real><real id="height">33</real></size></attributes><aspects><graphics><attributes><integer id="tileWidth">100</integer><integer id="tileHeight">100</integer></attributes></graphics></aspects></actor><actor id="id684921" prototype="id200768"><attributes><point id="position"><real id="x">914.5</real><real id="y">223</real></point><size id="size"><real id="width">247</real><real id="height">100</real></size></attributes><aspects><graphics><attributes><integer id="tileWidth">100</integer><integer id="tileHeight">100</integer></attributes></graphics></aspects></actor><actor id="id663607" prototype="id200768"><attributes><point id="position"><real id="x">1601.5</real><real id="y">37</real></point><size id="size"><real id="width">803</real><real id="height">100</real></size></attributes><aspects><graphics><attributes><integer id="tileWidth">100</integer><integer id="tileHeight">100</integer></attributes></graphics></aspects></actor><actor id="id866608" prototype="id200768"><attributes><point id="position"><real id="x">1589.5</real><real id="y">189</real></point><size id="size"><real id="width">287</real><real id="height">44</real></size></attributes><aspects><graphics><attributes><integer id="tileWidth">100</integer><integer id="tileHeight">100</integer></attributes></graphics></aspects></actor><actor id="id346082" prototype="id644691"><attributes><point id="position"><real id="x">1240</real><real id="y">293</real></point><size id="size"><real id="width">40</real><real id="height">40</real></size><angle id="rotation">0</angle></attributes><aspects/></actor><actor id="id152273" prototype="id644691"><attributes><point id="position"><real id="x">1308</real><real id="y">338</real></point><size id="size"><real id="width">40</real><real id="height">40</real></size><angle id="rotation">0</angle></attributes><aspects/></actor><actor id="id654448" prototype="id644691"><attributes><point id="position"><real id="x">1376</real><real id="y">258</real></point><size id="size"><real id="width">40</real><real id="height">40</real></size><angle id="rotation">0</angle></attributes><aspects/></actor></actors><attributes><text id="name">Background</text><boolean id="scrollable">true</boolean></attributes></layer></layers><attributes><text id="name">Game- L1</text><real id="time">0</real><size id="size"><real id="width">2000</real><real id="height">600</real></size><boolean id="wrapX">false</boolean><boolean id="wrapY">false</boolean><point id="gravity"><real id="x">0</real><real id="y">0</real></point><color id="color"><real id="red">0</real><real id="green">0</real><real id="blue">0</real><real id="alpha">1</real></color><rect id="camera"><point id="origin"><real id="x">0</real><real id="y">0</real></point><size id="size"><real id="width">667</real><real id="height">375</real></size><size id="trackingArea"><real id="width">0</real><real id="height">0</real></size><real id="rotation">0</real></rect><attributes id="autorotate"><boolean id="landscapeLeft">true</boolean><boolean id="portrait">false</boolean><boolean id="landscapeRight">false</boolean><boolean id="portraitUpsideDown">false</boolean></attributes></attributes></scene>
+<?xml version="1.0" encoding="utf-8"?>
+<scene PGFVersion="0.25" GSCVersion="1.25.6227" id="id391099">
+  <layers>
+    <layer id="id537192">
+      <actors>
+        <actor id="id707780" prototype="id926139">
+          <attributes>
+            <point id="position">
+              <real id="x">1845</real>
+              <real id="y">187</real>
+            </point>
+            <size id="size">
+              <real id="width">4311.6</real>
+              <real id="height">374.2</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id165350" prototype="id200768">
+          <attributes>
+            <point id="position">
+              <real id="x">551</real>
+              <real id="y">42</real>
+            </point>
+            <size id="size">
+              <real id="width">1121.6</real>
+              <real id="height">88</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth">100</integer>
+                <integer id="tileHeight">100</integer>
+              </attributes>
+            </graphics>
+            <physics>
+              <attributes>
+                <boolean id="canSleep">true</boolean>
+                <boolean id="betterColisions">false</boolean>
+              </attributes>
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id893087" prototype="id593515">
+          <attributes>
+            <point id="position">
+              <real id="x">535</real>
+              <real id="y">293</real>
+            </point>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id334223" prototype="id817068">
+          <attributes>
+            <point id="position">
+              <real id="x">-14</real>
+              <real id="y">402.5</real>
+            </point>
+            <size id="size">
+              <real id="width">62</real>
+              <real id="height">41</real>
+            </size>
+          </attributes>
+          <behaviors>
+            <behavior id="id275607" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rule</text>
+                <text id="bundleName">Rule.behavior</text>
+                <boolean id="runOnce">false</boolean>
+                <boolean id="runSequentially">false</boolean>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id798505" eventType="mouse position" pluginPredicateTypeIndex="0">
+                  <attributes>
+                    <index id="conditionType">1</index>
+                    <text id="subjectAttribute">game.attributes.id129170</text>
+                  </attributes>
+                  <predicate type="boolean">
+                    <attributes>
+                      <index id="RHS">1</index>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id659951" class="ChangeAttributeAction" enabled="true">
+                  <attributes>
+                    <text id="name">Change Attribute</text>
+                    <text id="bundleName">ChangeAttribute.behavior</text>
+                    <text id="targetAttribute">self.attributes.id800410</text>
+                    <text id="RHS">2</text>
+                  </attributes>
+                </behavior>
+                <behavior id="id795243" class="TimerBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Timer</text>
+                    <text id="bundleName">Timer.behavior</text>
+                    <boolean id="runOnce">false</boolean>
+                    <boolean id="runSequentially">false</boolean>
+                    <index id="timerType">0</index>
+                    <real id="interval">0.01</real>
+                    <boolean id="runToCompletion">false</boolean>
+                  </attributes>
+                  <behaviors>
+                    <behavior id="id193787" class="ChangeAttributeAction" enabled="true">
+                      <attributes>
+                        <text id="name">Change Attribute</text>
+                        <text id="bundleName">ChangeAttribute.behavior</text>
+                        <text id="targetAttribute">self.attributes.id800410</text>
+                        <text id="RHS">
+                          <expression>
+                            <string xml:space="preserve">-1*</string>
+                            <reference keypath="self.attributes.id800410" />
+                          </expression>
+                        </text>
+                      </attributes>
+                    </behavior>
+                    <behavior id="id486845" class="ChangeAttributeAction" enabled="true">
+                      <attributes>
+                        <text id="name">Change Attribute</text>
+                        <text id="bundleName">ChangeAttribute.behavior</text>
+                        <text id="targetAttribute">scene.attributes.camera.origin.x</text>
+                        <text id="RHS">
+                          <expression>
+                            <reference keypath="self.attributes.id800410" />
+                          </expression>
+                        </text>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                </behavior>
+                <behavior id="id945343" class="TimerBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Timer</text>
+                    <text id="bundleName">Timer.behavior</text>
+                    <boolean id="runOnce">false</boolean>
+                    <boolean id="runSequentially">false</boolean>
+                    <index id="timerType">0</index>
+                    <real id="interval">0.5</real>
+                    <boolean id="runToCompletion">true</boolean>
+                  </attributes>
+                  <behaviors>
+                    <behavior id="id262171" class="ChangeAttributeAction" enabled="true">
+                      <attributes>
+                        <text id="name">Change Attribute</text>
+                        <text id="bundleName">ChangeAttribute.behavior</text>
+                        <text id="targetAttribute">game.attributes.id129170</text>
+                        <text id="RHS">false</text>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                </behavior>
+              </behaviors>
+              <elseBehaviors />
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth">100</integer>
+                <integer id="tileHeight">100</integer>
+              </attributes>
+            </graphics>
+            <physics>
+              <attributes>
+                <boolean id="canSleep">true</boolean>
+                <boolean id="betterColisions">false</boolean>
+              </attributes>
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id466557" prototype="id148339">
+          <attributes>
+            <point id="position">
+              <real id="x">84</real>
+              <real id="y">323</real>
+            </point>
+            <size id="size">
+              <real id="width">50</real>
+              <real id="height">45</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id764044" prototype="id200768">
+          <attributes>
+            <point id="position">
+              <real id="x">536.5</real>
+              <real id="y">138.5</real>
+            </point>
+            <size id="size">
+              <real id="width">255</real>
+              <real id="height">33</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth">100</integer>
+                <integer id="tileHeight">100</integer>
+              </attributes>
+            </graphics>
+            <physics>
+              <attributes>
+                <boolean id="canSleep">true</boolean>
+                <boolean id="betterColisions">false</boolean>
+              </attributes>
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id684921" prototype="id200768">
+          <attributes>
+            <point id="position">
+              <real id="x">868</real>
+              <real id="y">198</real>
+            </point>
+            <size id="size">
+              <real id="width">147.8</real>
+              <real id="height">30.4</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth">100</integer>
+                <integer id="tileHeight">100</integer>
+              </attributes>
+            </graphics>
+            <physics>
+              <attributes>
+                <boolean id="canSleep">true</boolean>
+                <boolean id="betterColisions">false</boolean>
+              </attributes>
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id663607" prototype="id200768">
+          <attributes>
+            <point id="position">
+              <real id="x">1652</real>
+              <real id="y">37</real>
+            </point>
+            <size id="size">
+              <real id="width">711</real>
+              <real id="height">100</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth">100</integer>
+                <integer id="tileHeight">100</integer>
+              </attributes>
+            </graphics>
+            <physics>
+              <attributes>
+                <boolean id="canSleep">true</boolean>
+                <boolean id="betterColisions">false</boolean>
+              </attributes>
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id866608" prototype="id200768">
+          <attributes>
+            <point id="position">
+              <real id="x">1589.5</real>
+              <real id="y">189</real>
+            </point>
+            <size id="size">
+              <real id="width">287</real>
+              <real id="height">44</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth">100</integer>
+                <integer id="tileHeight">100</integer>
+              </attributes>
+            </graphics>
+            <physics>
+              <attributes>
+                <boolean id="canSleep">true</boolean>
+                <boolean id="betterColisions">false</boolean>
+              </attributes>
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id346082" prototype="id644691">
+          <attributes>
+            <point id="position">
+              <real id="x">1240</real>
+              <real id="y">293</real>
+            </point>
+            <size id="size">
+              <real id="width">40</real>
+              <real id="height">40</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id152273" prototype="id644691">
+          <attributes>
+            <point id="position">
+              <real id="x">1308</real>
+              <real id="y">338</real>
+            </point>
+            <size id="size">
+              <real id="width">40</real>
+              <real id="height">40</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id654448" prototype="id644691">
+          <attributes>
+            <point id="position">
+              <real id="x">1376</real>
+              <real id="y">258</real>
+            </point>
+            <size id="size">
+              <real id="width">40</real>
+              <real id="height">40</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id317288" prototype="id200768">
+          <attributes>
+            <point id="position">
+              <real id="x">2255</real>
+              <real id="y">132</real>
+            </point>
+            <size id="size">
+              <real id="width">229.6</real>
+              <real id="height">267.2</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id378249" prototype="id200768">
+          <attributes>
+            <point id="position">
+              <real id="x">2548</real>
+              <real id="y">192</real>
+            </point>
+            <size id="size">
+              <real id="width">159.2</real>
+              <real id="height">33.6</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id161788" prototype="id200768">
+          <attributes>
+            <point id="position">
+              <real id="x">2746</real>
+              <real id="y">145</real>
+            </point>
+            <size id="size">
+              <real id="width">100</real>
+              <real id="height">31.2</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id364880" prototype="id200768">
+          <attributes>
+            <point id="position">
+              <real id="x">2960</real>
+              <real id="y">234</real>
+            </point>
+            <size id="size">
+              <real id="width">168.8</real>
+              <real id="height">31.2</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <text id="name">platform Copy 1</text>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id700115" prototype="id200768">
+          <attributes>
+            <point id="position">
+              <real id="x">3251</real>
+              <real id="y">145</real>
+            </point>
+            <size id="size">
+              <real id="width">140.8</real>
+              <real id="height">31.2</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <text id="name">platform Copy 2</text>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id919791" prototype="id200768">
+          <attributes>
+            <point id="position">
+              <real id="x">3730</real>
+              <real id="y">115</real>
+            </point>
+            <size id="size">
+              <real id="width">532</real>
+              <real id="height">235.2</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <text id="name">platform Copy 3</text>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id184911" prototype="id897607">
+          <attributes>
+            <point id="position">
+              <real id="x">3940</real>
+              <real id="y">283</real>
+            </point>
+            <size id="size">
+              <real id="width">100</real>
+              <real id="height">100</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id389361" prototype="id644691">
+          <attributes>
+            <point id="position">
+              <real id="x">2210</real>
+              <real id="y">324</real>
+            </point>
+            <size id="size">
+              <real id="width">40</real>
+              <real id="height">40</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <text id="name">coin Copy 1</text>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id680343" prototype="id644691">
+          <attributes>
+            <point id="position">
+              <real id="x">2501</real>
+              <real id="y">286</real>
+            </point>
+            <size id="size">
+              <real id="width">40</real>
+              <real id="height">40</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <text id="name">coin Copy 2</text>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id528467" prototype="id644691">
+          <attributes>
+            <point id="position">
+              <real id="x">2593</real>
+              <real id="y">244</real>
+            </point>
+            <size id="size">
+              <real id="width">40</real>
+              <real id="height">40</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <text id="name">coin Copy 3</text>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id869669" prototype="id644691">
+          <attributes>
+            <point id="position">
+              <real id="x">2736</real>
+              <real id="y">210</real>
+            </point>
+            <size id="size">
+              <real id="width">40</real>
+              <real id="height">40</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <text id="name">coin Copy 4</text>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id257939" prototype="id644691">
+          <attributes>
+            <point id="position">
+              <real id="x">2927</real>
+              <real id="y">293</real>
+            </point>
+            <size id="size">
+              <real id="width">40</real>
+              <real id="height">40</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <text id="name">coin Copy 5</text>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id484545" prototype="id644691">
+          <attributes>
+            <point id="position">
+              <real id="x">3159</real>
+              <real id="y">232</real>
+            </point>
+            <size id="size">
+              <real id="width">40</real>
+              <real id="height">40</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <text id="name">coin Copy 6</text>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id393454" prototype="id644691">
+          <attributes>
+            <point id="position">
+              <real id="x">3255</real>
+              <real id="y">290</real>
+            </point>
+            <size id="size">
+              <real id="width">40</real>
+              <real id="height">40</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <text id="name">coin Copy 7</text>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id247741" prototype="id644691">
+          <attributes>
+            <point id="position">
+              <real id="x">3322</real>
+              <real id="y">203</real>
+            </point>
+            <size id="size">
+              <real id="width">40</real>
+              <real id="height">40</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <text id="name">coin Copy 8</text>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id486761" prototype="id762035">
+          <attributes>
+            <point id="position">
+              <real id="x">1203</real>
+              <real id="y">5</real>
+            </point>
+            <size id="size">
+              <real id="width">186.4</real>
+              <real id="height">120</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id932307" prototype="id762035">
+          <attributes>
+            <point id="position">
+              <real id="x">2074</real>
+              <real id="y">3</real>
+            </point>
+            <size id="size">
+              <real id="width">133.6</real>
+              <real id="height">120</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id292924" prototype="id762035">
+          <attributes>
+            <point id="position">
+              <real id="x">2916</real>
+              <real id="y">7</real>
+            </point>
+            <size id="size">
+              <real id="width">1096.8</real>
+              <real id="height">120</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id711416" prototype="id641430">
+          <attributes>
+            <point id="position">
+              <real id="x">836</real>
+              <real id="y">109</real>
+            </point>
+            <size id="size">
+              <real id="width">45</real>
+              <real id="height">45</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id114018" prototype="id873557">
+          <attributes>
+            <point id="position">
+              <real id="x">726</real>
+              <real id="y">109</real>
+            </point>
+            <size id="size">
+              <real id="width">10</real>
+              <real id="height">45</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+        <actor id="id235605" prototype="id130890">
+          <attributes>
+            <point id="position">
+              <real id="x">1066</real>
+              <real id="y">111</real>
+            </point>
+            <size id="size">
+              <real id="width">10</real>
+              <real id="height">45</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects />
+        </actor>
+      </actors>
+      <attributes>
+        <text id="name">Background</text>
+        <boolean id="scrollable">true</boolean>
+      </attributes>
+    </layer>
+  </layers>
+  <attributes>
+    <text id="name">Game- L1</text>
+    <real id="time">0</real>
+    <size id="size">
+      <real id="width">4000</real>
+      <real id="height">600</real>
+    </size>
+    <boolean id="wrapX">false</boolean>
+    <boolean id="wrapY">false</boolean>
+    <point id="gravity">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <color id="color">
+      <real id="red">0</real>
+      <real id="green">0</real>
+      <real id="blue">0</real>
+      <real id="alpha">1</real>
+    </color>
+    <rect id="camera">
+      <point id="origin">
+        <real id="x">0</real>
+        <real id="y">0</real>
+      </point>
+      <size id="size">
+        <real id="width">667</real>
+        <real id="height">375</real>
+      </size>
+      <size id="trackingArea">
+        <real id="width">3.20146636937716</real>
+        <real id="height">0</real>
+      </size>
+      <real id="rotation">0</real>
+    </rect>
+    <attributes id="autorotate">
+      <boolean id="landscapeLeft">true</boolean>
+      <boolean id="portrait">false</boolean>
+      <boolean id="landscapeRight">false</boolean>
+      <boolean id="portraitUpsideDown">false</boolean>
+    </attributes>
+  </attributes>
+</scene>

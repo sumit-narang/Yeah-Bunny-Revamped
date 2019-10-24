@@ -1,28 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<actor id="id200768" PGFVersion="0.25" GSCVersion="1.25.6227">
+<actor id="id125180" PGFVersion="0.25" GSCVersion="1.25.6227">
   <attributes>
-    <text id="name">platform</text>
+    <text id="name">respawn</text>
     <real id="time">0</real>
     <point id="position">
       <real id="x">0</real>
       <real id="y">0</real>
     </point>
     <size id="size">
-      <real id="width">100</real>
-      <real id="height">100</real>
+      <real id="width">120</real>
+      <real id="height">120</real>
     </size>
     <angle id="rotation">0</angle>
     <color id="color">
       <real id="red">1</real>
       <real id="green">1</real>
       <real id="blue">1</real>
-      <real id="alpha">0.5</real>
+      <real id="alpha">0</real>
     </color>
     <image id="image" />
     <text id="tags" />
     <boolean id="preloadArt">true</boolean>
   </attributes>
-  <behaviors />
+  <behaviors>
+    <behavior id="id514448" class="TimerBehavior" enabled="true">
+      <attributes>
+        <text id="name">Timer</text>
+        <text id="bundleName">Timer.behavior</text>
+        <index id="timerType">1</index>
+        <real id="interval">2</real>
+        <boolean id="runToCompletion">false</boolean>
+      </attributes>
+      <behaviors>
+        <behavior id="id509716" class="ResetGameAction" enabled="true">
+          <attributes>
+            <text id="name">Reset Game</text>
+            <text id="bundleName">ResetGame.behavior</text>
+            <index id="enableAdvertisement">0</index>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+  </behaviors>
   <aspects>
     <graphics>
       <attributes>
@@ -56,9 +75,9 @@
       <attributes>
         <real id="density">1</real>
         <real id="friction">3</real>
-        <real id="restitution">0</real>
+        <real id="restitution">1</real>
         <boolean id="fixedRotation">false</boolean>
-        <boolean id="movable">false</boolean>
+        <boolean id="movable">true</boolean>
         <enumeration id="collisionShape">0</enumeration>
         <real id="drag">0</real>
         <real id="angularDrag">0</real>
