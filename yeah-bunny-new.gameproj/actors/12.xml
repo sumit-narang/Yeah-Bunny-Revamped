@@ -1,57 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<actor id="id593515" PGFVersion="0.25" GSCVersion="1.25.6227">
+<actor id="id641430" PGFVersion="0.25" GSCVersion="1.25.6227">
   <attributes>
-    <text id="name">shake-btn</text>
+    <text id="name">Moving Enemy</text>
     <real id="time">0</real>
     <point id="position">
       <real id="x">0</real>
       <real id="y">0</real>
     </point>
     <size id="size">
-      <real id="width">70</real>
-      <real id="height">70</real>
+      <real id="width">45</real>
+      <real id="height">45</real>
     </size>
     <angle id="rotation">0</angle>
     <color id="color">
-      <real id="red">0.3919523358345</real>
+      <real id="red">0</real>
       <real id="green">1</real>
-      <real id="blue">0.44272494316101</real>
+      <real id="blue">0</real>
       <real id="alpha">1</real>
     </color>
     <image id="image" />
-    <text id="tags" />
+    <text id="tags">Enemies</text>
     <boolean id="preloadArt">true</boolean>
   </attributes>
   <behaviors>
-    <behavior id="id769364" class="RuleBehavior" enabled="true">
+    <behavior id="id714128" class="RuleBehavior" enabled="true">
       <attributes>
-        <text id="name">Rule</text>
+        <text id="name">Change DIrection to left when collision with right obstacle</text>
         <text id="bundleName">Rule.behavior</text>
-        <boolean id="runOnce">false</boolean>
-        <boolean id="runSequentially">false</boolean>
         <real id="compoundConditionKind">0</real>
       </attributes>
       <conditions>
-        <condition id="id521524" eventType="touch" pluginPredicateTypeIndex="0">
+        <condition id="id180847" eventType="overlaps or collides" pluginPredicateTypeIndex="0" class="Collision">
           <attributes>
+            <text id="name">default name</text>
             <index id="conditionType">0</index>
           </attributes>
-          <predicate type="touch" conditionType="pressed">
-            <attributes />
+          <predicate type="collision">
+            <attributes>
+              <text id="prototypeKey">id130890</text>
+              <text id="actorTag">Enemy Obstacle</text>
+              <real id="mode">0</real>
+            </attributes>
           </predicate>
         </condition>
       </conditions>
       <behaviors>
-        <behavior id="id115078" class="ChangeAttributeAction" enabled="true">
+        <behavior id="id120089" class="ChangeAttributeAction" enabled="true">
           <attributes>
             <text id="name">Change Attribute</text>
             <text id="bundleName">ChangeAttribute.behavior</text>
-            <text id="targetAttribute">game.attributes.id129170</text>
-            <text id="RHS">true</text>
+            <text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text>
+            <text id="RHS">-50</text>
           </attributes>
         </behavior>
       </behaviors>
-      <elseBehaviors />
+    </behavior>
+    <behavior id="id409525" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Change DIrection to right when collision with left obstacle</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id217040" eventType="overlaps or collides" pluginPredicateTypeIndex="0" class="Collision">
+          <attributes>
+            <text id="name">default name</text>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="collision">
+            <attributes>
+              <text id="prototypeKey">id873557</text>
+              <text id="actorTag">Enemy Obstacle</text>
+              <real id="mode">0</real>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id951870" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text>
+            <text id="RHS">50</text>
+          </attributes>
+        </behavior>
+      </behaviors>
     </behavior>
   </behaviors>
   <aspects>
@@ -65,14 +99,12 @@
         <enumeration id="verticalAnchor">0</enumeration>
         <boolean id="flipHorizontally">false</boolean>
         <boolean id="flipVertically">false</boolean>
-        <integer id="tileWidth">70</integer>
-        <integer id="tileHeight">70</integer>
       </attributes>
     </graphics>
     <motion>
       <attributes>
         <point id="linearVelocity">
-          <real id="x">0</real>
+          <real id="x">50</real>
           <real id="y">0</real>
         </point>
         <point id="centerOfMass">
@@ -89,7 +121,7 @@
       <attributes>
         <real id="density">1</real>
         <real id="friction">3</real>
-        <real id="restitution">1</real>
+        <real id="restitution">0</real>
         <boolean id="fixedRotation">false</boolean>
         <boolean id="movable">true</boolean>
         <enumeration id="collisionShape">0</enumeration>

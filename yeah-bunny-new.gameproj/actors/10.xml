@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<actor id="id200768" PGFVersion="0.25" GSCVersion="1.25.6227">
+<actor id="id762035" PGFVersion="0.25" GSCVersion="1.25.6227">
   <attributes>
-    <text id="name">platform</text>
+    <text id="name">Fire</text>
     <real id="time">0</real>
     <point id="position">
       <real id="x">0</real>
       <real id="y">0</real>
     </point>
     <size id="size">
-      <real id="width">100</real>
-      <real id="height">100</real>
+      <real id="width">120</real>
+      <real id="height">120</real>
     </size>
     <angle id="rotation">0</angle>
     <color id="color">
       <real id="red">1</real>
-      <real id="green">1</real>
-      <real id="blue">1</real>
-      <real id="alpha">0.5</real>
+      <real id="green">0</real>
+      <real id="blue">0</real>
+      <real id="alpha">1</real>
     </color>
     <image id="image" />
-    <text id="tags" />
+    <text id="tags">Enemies</text>
     <boolean id="preloadArt">true</boolean>
   </attributes>
   <behaviors />
@@ -56,9 +56,9 @@
       <attributes>
         <real id="density">1</real>
         <real id="friction">3</real>
-        <real id="restitution">0</real>
+        <real id="restitution">1</real>
         <boolean id="fixedRotation">false</boolean>
-        <boolean id="movable">false</boolean>
+        <boolean id="movable">true</boolean>
         <enumeration id="collisionShape">0</enumeration>
         <real id="drag">0</real>
         <real id="angularDrag">0</real>
