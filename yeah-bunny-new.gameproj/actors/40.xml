@@ -1,2 +1,216 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<actor PGFVersion="0.25" id="id726385" GSCVersion="1.25.95"><attributes><text id="name">main-character</text><real id="time">0</real><point id="position"><real id="x">0</real><real id="y">0</real></point><size id="size"><real id="width">331</real><real id="height">441</real></size><angle id="rotation">0</angle><color id="color"><real id="red">1</real><real id="green">1</real><real id="blue">1</real><real id="alpha">1</real></color><image id="image">penguin-1</image><text id="tags"></text><boolean id="preloadArt">true</boolean></attributes><behaviors><behavior id="id275063" class="ConstrainAttributeBehavior" enabled="true"><attributes><text id="name">Constrain Attribute - set position of player bottom</text><text id="bundleName">ConstrainAttribute.behavior</text><text id="targetAttribute">game.attributes.id997191</text><text id="RHS"><expression><reference keypath="self.attributes.position.y"/><string xml:space="preserve">-(</string><reference keypath="self.attributes.size.height"/><string xml:space="preserve">/2)+5</string></expression></text></attributes></behavior><behavior enabled="true" id="id300030" class="RuleBehavior"><attributes><text id="name">kill enemy when main-character jumps on top of it</text><text id="bundleName">Rule.behavior</text><boolean id="runOnce">false</boolean><boolean id="runSequentially">false</boolean><real id="compoundConditionKind">0</real></attributes><conditions><condition id="id399032" pluginPredicateTypeIndex="0" eventType="overlaps or collides"><attributes><index id="conditionType">0</index></attributes><predicate type="collision"><attributes><text id="prototypeKey">id641430</text><text id="actorTag">All</text><real id="mode">0</real></attributes></predicate></condition><condition id="id776938" pluginPredicateTypeIndex="0" eventType="mouse position"><attributes><index id="conditionType">1</index><text id="subjectAttribute">game.attributes.id997191</text></attributes><predicate type="number"><attributes><text id="operator">&lt;=</text><real id="RHS"><expression><reference keypath="game.attributes.id589996"/></expression></real></attributes></predicate></condition></conditions><behaviors><behavior id="id414210" class="DestroyAction" enabled="true"><attributes><text id="name">Destroy</text><text id="bundleName">Destroy.behavior</text></attributes></behavior></behaviors><elseBehaviors/></behavior><behavior id="id515444" class="AccelerateBehavior" enabled="true"><attributes><text id="name">move down - Accelerate</text><text id="bundleName">Accelerate.behavior</text><angle id="direction">270</angle><index id="space">1</index><real id="acceleration">1000</real></attributes></behavior><behavior id="id278727" class="CollideBehavior" enabled="true"><attributes><text id="name">Collide</text><text id="bundleName">Collide.behavior</text><text id="prototypeKey">id158103</text><text id="actorTag"></text><index id="mode">0</index></attributes></behavior><behavior enabled="false" id="id666519" class="RuleBehavior"><attributes><text id="name">left - linear velocity</text><text id="bundleName">Rule.behavior</text><boolean id="runOnce">false</boolean><boolean id="runSequentially">false</boolean><real id="compoundConditionKind">0</real></attributes><conditions><condition id="id116478" pluginPredicateTypeIndex="0" eventType="key"><attributes><index id="conditionType">0</index></attributes><predicate type="key"><attributes><text id="mode">down</text><text id="keyString">a</text></attributes></predicate></condition></conditions><behaviors><behavior id="id682882" class="ChangeAttributeAction" enabled="true"><attributes><text id="name">Change Attribute</text><text id="bundleName">ChangeAttribute.behavior</text><text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text><text id="RHS">-250</text></attributes></behavior></behaviors><elseBehaviors><behavior id="id503102" class="ChangeAttributeAction" enabled="true"><attributes><text id="name">Change Attribute</text><text id="bundleName">ChangeAttribute.behavior</text><text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text><text id="RHS">0</text></attributes></behavior></elseBehaviors></behavior><behavior enabled="false" id="id497688" class="RuleBehavior"><attributes><text id="name">right-linear velocity</text><text id="bundleName">Rule.behavior</text><boolean id="runOnce">false</boolean><boolean id="runSequentially">false</boolean><real id="compoundConditionKind">0</real></attributes><conditions><condition id="id116478" pluginPredicateTypeIndex="0" eventType="key"><attributes><index id="conditionType">0</index></attributes><predicate type="key"><attributes><text id="mode">down</text><text id="keyString">d</text></attributes></predicate></condition></conditions><behaviors><behavior id="id682882" class="ChangeAttributeAction" enabled="true"><attributes><text id="name">Change Attribute</text><text id="bundleName">ChangeAttribute.behavior</text><text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text><text id="RHS">250</text></attributes></behavior></behaviors><elseBehaviors><behavior id="id319880" class="ChangeAttributeAction" enabled="true"><attributes><text id="name">Change Attribute</text><text id="bundleName">ChangeAttribute.behavior</text><text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text><text id="RHS">0</text></attributes></behavior></elseBehaviors></behavior><behavior enabled="true" id="id650255" class="RuleBehavior"><attributes><text id="name">move up - space + platform collide then Y linear velocity</text><text id="bundleName">Rule.behavior</text><boolean id="runOnce">false</boolean><boolean id="runSequentially">false</boolean><real id="compoundConditionKind">0</real></attributes><conditions><condition id="id412850" pluginPredicateTypeIndex="0" eventType="key"><attributes><index id="conditionType">0</index></attributes><predicate type="key"><attributes><text id="mode">down</text><text id="keyString">space</text></attributes></predicate></condition><condition id="id141670" pluginPredicateTypeIndex="0" eventType="overlaps or collides"><attributes><index id="conditionType">0</index></attributes><predicate type="collision"><attributes><text id="prototypeKey">id158103</text><text id="actorTag"></text><real id="mode">0</real></attributes></predicate></condition></conditions><behaviors><behavior id="id495804" class="ChangeAttributeAction" enabled="true"><attributes><text id="name">Change Attribute</text><text id="bundleName">ChangeAttribute.behavior</text><text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.y</text><text id="RHS">550</text></attributes></behavior></behaviors><elseBehaviors/></behavior><behavior id="id752011" class="ControlCameraBehavior" enabled="true"><attributes><text id="name">Control Camera</text><text id="bundleName">ControlCamera.behavior</text></attributes></behavior><behavior id="id958423" class="ConstrainAttributeBehavior" enabled="true"><attributes><text id="name">Continous acceleration</text><text id="bundleName">ConstrainAttribute.behavior</text><text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text><text id="RHS">200</text></attributes></behavior><behavior enabled="true" id="id630252" class="RuleBehavior"><attributes><text id="name">Collision with enemies destroys the actor and game resets</text><text id="bundleName">Rule.behavior</text><boolean id="runOnce">false</boolean><boolean id="runSequentially">false</boolean><real id="compoundConditionKind">0</real></attributes><conditions><condition id="id758470" pluginPredicateTypeIndex="0" eventType="overlaps or collides"><attributes><index id="conditionType">0</index><text id="name">default name</text></attributes><predicate type="collision"><attributes><text id="prototypeKey">id495747</text><text id="actorTag">Enemies</text><real id="mode">0</real></attributes></predicate></condition></conditions><behaviors><behavior id="id485334" class="DestroyAction" enabled="true"><attributes><text id="name">Destroy</text><text id="bundleName">Destroy.behavior</text></attributes></behavior><behavior id="id370882" class="SpawnAction" enabled="true"><attributes><text id="name">Spawn Actor</text><text id="bundleName">Spawn.behavior</text><text id="prototypeKey">id125180</text><angle id="direction">0</angle><index id="directionSpace">0</index><real id="x">0</real><real id="y">0</real><index id="positionSpace">0</index><index id="layerOrder">0</index></attributes></behavior></behaviors><elseBehaviors/></behavior><behavior enabled="true" id="id261288" class="RuleBehavior"><attributes><text id="name">Level Up</text><text id="bundleName">Rule.behavior</text><boolean id="runOnce">false</boolean><boolean id="runSequentially">false</boolean><real id="compoundConditionKind">0</real></attributes><conditions><condition id="id764907" pluginPredicateTypeIndex="0" eventType="overlaps or collides"><attributes><index id="conditionType">0</index><text id="name">default name</text></attributes><predicate type="collision"><attributes><text id="prototypeKey">id897607</text><text id="actorTag"></text><real id="mode">0</real></attributes></predicate></condition></conditions><behaviors><behavior id="id515699" class="ChangeSceneAction" enabled="true"><attributes><text id="name">Change Scene</text><text id="bundleName">ChangeScene.behavior</text><text id="sceneKey">id296210</text><index id="enableAdvertisement">1</index><index id="index">1</index></attributes></behavior><behavior id="id495849" class="DestroyAction" enabled="true"><attributes><text id="name">Destroy</text><text id="bundleName">Destroy.behavior</text></attributes></behavior></behaviors><elseBehaviors/></behavior></behaviors><aspects><graphics><attributes><boolean id="visible">true</boolean><enumeration id="blendingMode">0</enumeration><enumeration id="horizontalWrap">0</enumeration><enumeration id="verticalWrap">0</enumeration><enumeration id="horizontalAnchor">0</enumeration><enumeration id="verticalAnchor">0</enumeration><boolean id="flipHorizontally">false</boolean><boolean id="flipVertically">false</boolean><integer id="tileWidth">331</integer><integer id="tileHeight">441</integer></attributes></graphics><motion><attributes><point id="linearVelocity"><real id="x">0</real><real id="y">0</real></point><point id="centerOfMass"><real id="x">0</real><real id="y">0</real></point><real id="angularVelocity">0</real><real id="maxSpeed">0</real><boolean id="applyMaxSpeed">false</boolean><boolean id="pin">false</boolean></attributes></motion><physics><attributes><real id="density">1</real><real id="friction">3</real><real id="restitution">0.1</real><boolean id="fixedRotation">true</boolean><boolean id="movable">true</boolean><enumeration id="collisionShape">0</enumeration><real id="drag">0</real><real id="angularDrag">0</real><boolean id="canSleep">true</boolean><boolean id="betterColisions">false</boolean></attributes></physics></aspects></actor>
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id495747" PGFVersion="0.25" GSCVersion="1.25.6227">
+  <attributes>
+    <text id="name">Moving Enemy</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">750</real>
+      <real id="height">512</real>
+    </size>
+    <angle id="rotation">345</angle>
+    <color id="color">
+      <real id="red">0</real>
+      <real id="green">0.250980392156863</real>
+      <real id="blue">0.501960784313725</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image" />
+    <text id="tags">Enemies</text>
+    <boolean id="preloadArt">true</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id514837" class="ConstrainAttributeBehavior" enabled="true">
+      <attributes>
+        <text id="name">Constrain Attribute - getting the position of Enemy top</text>
+        <text id="bundleName">ConstrainAttribute.behavior</text>
+        <text id="targetAttribute">game.attributes.id589996</text>
+        <text id="RHS">
+          <expression>
+            <reference keypath="self.attributes.position.y" />
+            <string xml:space="preserve">+(</string>
+            <reference keypath="self.attributes.size.height" />
+            <string xml:space="preserve">/2)</string>
+            <string xml:space="preserve">+3</string>
+          </expression>
+        </text>
+      </attributes>
+    </behavior>
+    <behavior id="id875930" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Kill the enemy when the actor is on top of enemy</text>
+        <text id="bundleName">Rule.behavior</text>
+        <boolean id="runOnce">false</boolean>
+        <boolean id="runSequentially">false</boolean>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id692467" eventType="overlaps or collides" pluginPredicateTypeIndex="0">
+          <attributes>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="collision">
+            <attributes>
+              <text id="prototypeKey">id726385</text>
+              <text id="actorTag">All</text>
+              <real id="mode">0</real>
+            </attributes>
+          </predicate>
+        </condition>
+        <condition id="id175516" eventType="mouse position" pluginPredicateTypeIndex="0">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">game.attributes.id997191</text>
+          </attributes>
+          <predicate type="number">
+            <attributes>
+              <text id="operator">&gt;=</text>
+              <real id="RHS">
+                <expression>
+                  <reference keypath="game.attributes.id589996" />
+                </expression>
+              </real>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id308487" class="DestroyAction" enabled="true">
+          <attributes>
+            <text id="name">Destroy</text>
+            <text id="bundleName">Destroy.behavior</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id157694" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Change DIrection to left when collision with right obstacle</text>
+        <text id="bundleName">Rule.behavior</text>
+        <boolean id="runOnce">false</boolean>
+        <boolean id="runSequentially">false</boolean>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id180847" eventType="overlaps or collides" pluginPredicateTypeIndex="0">
+          <attributes>
+            <index id="conditionType">0</index>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="collision">
+            <attributes>
+              <text id="prototypeKey">id130890</text>
+              <text id="actorTag">Enemy Obstacle</text>
+              <real id="mode">0</real>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id120089" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text>
+            <text id="RHS">-50</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id479722" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Change DIrection to right when collision with left obstacle</text>
+        <text id="bundleName">Rule.behavior</text>
+        <boolean id="runOnce">false</boolean>
+        <boolean id="runSequentially">false</boolean>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id217040" eventType="overlaps or collides" pluginPredicateTypeIndex="0">
+          <attributes>
+            <index id="conditionType">0</index>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="collision">
+            <attributes>
+              <text id="prototypeKey">id873557</text>
+              <text id="actorTag">Enemy Obstacle</text>
+              <real id="mode">0</real>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id951870" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text>
+            <text id="RHS">50</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id843174" class="CollideBehavior" enabled="false">
+      <attributes>
+        <text id="name">Collide</text>
+        <text id="bundleName">Collide.behavior</text>
+        <text id="prototypeKey">id158103</text>
+        <text id="actorTag">Ground</text>
+        <index id="mode">0</index>
+      </attributes>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+        <integer id="tileWidth">750</integer>
+        <integer id="tileHeight">512</integer>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <point id="centerOfMass">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+        <boolean id="pin">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+        <boolean id="canSleep">true</boolean>
+        <boolean id="betterColisions">false</boolean>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>
