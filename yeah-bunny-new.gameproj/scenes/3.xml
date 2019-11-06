@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<scene PGFVersion="0.25" GSCVersion="1.25.6227" id="id776681">
+<scene PGFVersion="0.25" GSCVersion="1.25.6227" id="id296210">
   <layers>
-    <layer id="id331992">
+    <layer id="id307468">
       <actors>
-        <actor id="id287670" prototype="id620889">
+        <actor id="id781056" prototype="id817068">
           <attributes>
             <point id="position">
-              <real id="x">325</real>
-              <real id="y">230</real>
+              <real id="x">337</real>
+              <real id="y">195</real>
             </point>
             <size id="size">
-              <real id="width">120</real>
-              <real id="height">59</real>
-            </size>
-            <angle id="rotation">0</angle>
-          </attributes>
-          <aspects />
-        </actor>
-        <actor id="id834635" prototype="id457010">
-          <attributes>
-            <point id="position">
-              <real id="x">327</real>
-              <real id="y">136</real>
-            </point>
-            <size id="size">
-              <real id="width">134</real>
-              <real id="height">55</real>
+              <real id="width">255.2</real>
+              <real id="height">100</real>
             </size>
             <angle id="rotation">0</angle>
           </attributes>
@@ -39,7 +25,7 @@
     </layer>
   </layers>
   <attributes>
-    <text id="name">Game Over</text>
+    <text id="name">Game -L2</text>
     <real id="time">0</real>
     <size id="size">
       <real id="width">667</real>

@@ -54,6 +54,8 @@
     <actor id="id872188" />
     <actor id="id441297" />
     <actor id="id957995" />
+    <actor id="id620889" />
+    <actor id="id457010" />
   </prototypes>
   <plugins>
     <attributes id="playhaven" />
@@ -62,8 +64,10 @@
     </attributes>
   </plugins>
   <scenes>
+    <scene id="id776681" />
     <scene id="id391099" />
     <scene id="id296210" />
+    <scene id="id176008" />
   </scenes>
   <attributes>
     <text id="name">default name</text>
@@ -226,7 +230,7 @@
     </playermap>
     <table id="id987335" name="PurchaseTable">PurchaseTable</table>
     <boolean id="id129170" name="screen-shake">false</boolean>
-    <integer id="id600273" name="coins">0</integer>
+    <integer id="id600273" name="Score">0</integer>
     <angle id="id122412" name="Direction">0</angle>
     <real id="id997191" name="Player-bottom">0</real>
     <real id="id589996" name="Enemy-top">0</real>

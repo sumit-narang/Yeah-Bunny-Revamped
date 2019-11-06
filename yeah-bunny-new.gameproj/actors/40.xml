@@ -34,7 +34,6 @@
             <string xml:space="preserve">+(</string>
             <reference keypath="self.attributes.size.height" />
             <string xml:space="preserve">/2)</string>
-            <string xml:space="preserve">+3</string>
           </expression>
         </text>
       </attributes>
