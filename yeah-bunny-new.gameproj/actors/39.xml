@@ -199,7 +199,7 @@
     </behavior>
     <behavior id="id650255" class="RuleBehavior" enabled="true">
       <attributes>
-        <text id="name">move up - space + platform collide then Y linear velocity</text>
+        <text id="name">Jump - space + platform collide then Y linear velocity</text>
         <text id="bundleName">Rule.behavior</text>
         <boolean id="runOnce">false</boolean>
         <boolean id="runSequentially">false</boolean>
@@ -229,15 +229,6 @@
             </attributes>
           </predicate>
         </condition>
-        <condition id="id711391" eventType="touch" pluginPredicateTypeIndex="0" class="Touch">
-          <attributes>
-            <text id="name">default name</text>
-            <index id="conditionType">0</index>
-          </attributes>
-          <predicate type="touch" conditionType="pressed">
-            <attributes />
-          </predicate>
-        </condition>
       </conditions>
       <behaviors>
         <behavior id="id495804" class="ChangeAttributeAction" enabled="true">
@@ -250,6 +241,48 @@
         </behavior>
       </behaviors>
       <elseBehaviors />
+    </behavior>
+    <behavior id="id870151" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">jump for device</text>
+        <text id="bundleName">Rule.behavior</text>
+        <boolean id="runOnce">false</boolean>
+        <boolean id="runSequentially">false</boolean>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id742130" eventType="overlaps or collides" pluginPredicateTypeIndex="0">
+          <attributes>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="collision">
+            <attributes>
+              <text id="prototypeKey">id158103</text>
+              <text id="actorTag" />
+              <real id="mode">0</real>
+            </attributes>
+          </predicate>
+        </condition>
+        <condition id="id965255" eventType="touch" pluginPredicateTypeIndex="0" class="Touch">
+          <attributes>
+            <text id="name">default name</text>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="touch" conditionType="pressed">
+            <attributes />
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id894863" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.y</text>
+            <text id="RHS">550</text>
+          </attributes>
+        </behavior>
+      </behaviors>
     </behavior>
     <behavior id="id752011" class="ControlCameraBehavior" enabled="true">
       <attributes>
