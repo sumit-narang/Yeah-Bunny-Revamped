@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <assets PGFVersion="0.25" GSCVersion="1.25.6227">
-  <sounds />
+  <sounds>
+    <music name="pingu_dance_mix">
+      <file name="pingu_dance_mix.mp3" size="465605" />
+    </music>
+    <music name="pingu_dance_mix">
+      <file name="pingu_dance_mix.mp3" size="465605" />
+    </music>
+  </sounds>
   <images>
     <image name="ice-small-diff">
       <file name="ice-small-diff.png" size="8666" />
@@ -41,14 +48,23 @@
     <image name="sky">
       <file name="sky.png" size="190995" />
     </image>
-    <image name="file 1">
-      <file name="file 1.png" size="32803" />
-    </image>
-    <image name="1">
-      <file name="1.png" size="33975" />
-    </image>
     <image name="SMall_org">
       <file name="SMall_org.png" size="9376" />
+    </image>
+    <image name="Loading screen background">
+      <file name="Loading screen background.png" size="238223" />
+    </image>
+    <image name="press-to-jump">
+      <file name="press-to-jump.png" size="11644" />
+    </image>
+    <image name="play">
+      <file name="play.png" size="187970" />
+    </image>
+    <image name="jump_to_kill">
+      <file name="jump_to_kill.png" size="17168" />
+    </image>
+    <image name="walrus1">
+      <file name="walrus1.png" size="7549" />
     </image>
   </images>
   <fonts />

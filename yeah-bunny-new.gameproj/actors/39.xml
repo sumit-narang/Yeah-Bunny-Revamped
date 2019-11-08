@@ -92,6 +92,20 @@
             <index id="index">1</index>
           </attributes>
         </behavior>
+        <behavior id="id160413" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id382971</text>
+            <text id="RHS">true</text>
+          </attributes>
+        </behavior>
+        <behavior id="id715024" class="StopMusicAction" enabled="true">
+          <attributes>
+            <text id="name">Stop Music</text>
+            <text id="bundleName">StopMusic.behavior</text>
+          </attributes>
+        </behavior>
       </behaviors>
       <elseBehaviors />
     </behavior>
@@ -242,7 +256,7 @@
       </behaviors>
       <elseBehaviors />
     </behavior>
-    <behavior id="id870151" class="RuleBehavior" enabled="true">
+    <behavior id="id870151" class="RuleBehavior" enabled="false">
       <attributes>
         <text id="name">jump for device</text>
         <text id="bundleName">Rule.behavior</text>
@@ -383,6 +397,20 @@
             <text id="bundleName">Destroy.behavior</text>
           </attributes>
         </behavior>
+        <behavior id="id791861" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id382971</text>
+            <text id="RHS">true</text>
+          </attributes>
+        </behavior>
+        <behavior id="id957311" class="StopMusicAction" enabled="true">
+          <attributes>
+            <text id="name">Stop Music</text>
+            <text id="bundleName">StopMusic.behavior</text>
+          </attributes>
+        </behavior>
       </behaviors>
       <elseBehaviors />
     </behavior>
@@ -414,7 +442,7 @@
             <text id="bundleName">Timer.behavior</text>
             <index id="timerType">2</index>
             <real id="interval">2</real>
-            <boolean id="runToCompletion">true</boolean>
+            <boolean id="runToCompletion">false</boolean>
           </attributes>
           <behaviors>
             <behavior id="id786708" class="ConstrainAttributeBehavior" enabled="true">
@@ -473,6 +501,70 @@
             <index id="enableAdvertisement">1</index>
             <index id="index">1</index>
           </attributes>
+        </behavior>
+        <behavior id="id708169" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id382971</text>
+            <text id="RHS">true</text>
+          </attributes>
+        </behavior>
+        <behavior id="id380694" class="StopMusicAction" enabled="true">
+          <attributes>
+            <text id="name">Stop Music</text>
+            <text id="bundleName">StopMusic.behavior</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id779231" class="PlayMusicAction" enabled="true">
+      <attributes>
+        <text id="name">Play Music</text>
+        <text id="bundleName">PlayMusic.behavior</text>
+        <music id="musicName">pingu_dance_mix</music>
+        <boolean id="loop">true</boolean>
+      </attributes>
+    </behavior>
+    <behavior id="id165173" class="TimerBehavior" enabled="true">
+      <attributes>
+        <text id="name">Timer</text>
+        <text id="bundleName">Timer.behavior</text>
+        <index id="timerType">0</index>
+        <real id="interval">0.001</real>
+        <boolean id="runToCompletion">true</boolean>
+      </attributes>
+      <behaviors>
+        <behavior id="id572977" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id372698" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+              <attributes>
+                <index id="conditionType">1</index>
+                <text id="subjectAttribute">game.attributes.id577352</text>
+                <text id="name">default name</text>
+              </attributes>
+              <predicate type="boolean">
+                <attributes>
+                  <index id="RHS">1</index>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id573847" class="ChangeAttributeAction" enabled="true">
+              <attributes>
+                <text id="name">Change Attribute</text>
+                <text id="bundleName">ChangeAttribute.behavior</text>
+                <text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.y</text>
+                <text id="RHS">500</text>
+              </attributes>
+            </behavior>
+          </behaviors>
         </behavior>
       </behaviors>
     </behavior>

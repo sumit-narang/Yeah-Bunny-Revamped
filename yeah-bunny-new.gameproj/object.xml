@@ -56,6 +56,11 @@
     <actor id="id957995" />
     <actor id="id620889" />
     <actor id="id457010" />
+    <actor id="id412016" />
+    <actor id="id418141" />
+    <actor id="id661767" />
+    <actor id="id405554" />
+    <actor id="id687873" />
   </prototypes>
   <plugins>
     <attributes id="playhaven" />
@@ -64,10 +69,10 @@
     </attributes>
   </plugins>
   <scenes>
+    <scene id="id176008" />
     <scene id="id776681" />
     <scene id="id391099" />
     <scene id="id296210" />
-    <scene id="id176008" />
   </scenes>
   <attributes>
     <text id="name">default name</text>
@@ -234,5 +239,7 @@
     <angle id="id122412" name="Direction">0</angle>
     <real id="id997191" name="Player-bottom">0</real>
     <real id="id589996" name="Enemy-top">0</real>
+    <boolean id="id382971" name="GameOver">false</boolean>
+    <boolean id="id577352" name="Player_touched">false</boolean>
   </attributes>
 </game>

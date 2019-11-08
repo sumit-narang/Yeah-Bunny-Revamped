@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<actor id="id620889" PGFVersion="0.25" GSCVersion="1.25.6227">
+<actor id="id405554" PGFVersion="0.25" GSCVersion="1.25.6227">
   <attributes>
-    <text id="name">ScoreBox</text>
+    <text id="name">Actor 3</text>
     <real id="time">0</real>
     <point id="position">
       <real id="x">0</real>
       <real id="y">0</real>
     </point>
     <size id="size">
-      <real id="width">120</real>
-      <real id="height">120</real>
+      <real id="width">667</real>
+      <real id="height">375</real>
     </size>
     <angle id="rotation">0</angle>
     <color id="color">
@@ -18,46 +18,11 @@
       <real id="blue">1</real>
       <real id="alpha">1</real>
     </color>
-    <image id="image" />
+    <image id="image">Loading screen background</image>
     <text id="tags" />
     <boolean id="preloadArt">true</boolean>
   </attributes>
-  <behaviors>
-    <behavior id="id625933" class="DisplayTextBehavior" enabled="true">
-      <attributes>
-        <text id="name">Display Text</text>
-        <text id="bundleName">DisplayText.behavior</text>
-        <text id="text">
-          <expression>
-            <reference keypath="game.attributes.id600273" />
-          </expression>
-        </text>
-        <text id="font">Voces</text>
-        <real id="size">30</real>
-        <index id="alignment">1</index>
-        <boolean id="wrap">true</boolean>
-        <color id="color">
-          <real id="red">0</real>
-          <real id="green">0</real>
-          <real id="blue">0</real>
-          <real id="alpha">1</real>
-        </color>
-        <real id="offsetx">0</real>
-        <real id="offsety">0</real>
-        <index id="space">0</index>
-        <index id="directionSpace">0</index>
-        <angle id="direction">0</angle>
-      </attributes>
-    </behavior>
-    <behavior id="id648096" class="ChangeAttributeAction" enabled="true">
-      <attributes>
-        <text id="name">Change Attribute</text>
-        <text id="bundleName">ChangeAttribute.behavior</text>
-        <text id="targetAttribute">self.attributes.color.alpha</text>
-        <text id="RHS">0</text>
-      </attributes>
-    </behavior>
-  </behaviors>
+  <behaviors />
   <aspects>
     <graphics>
       <attributes>
@@ -69,6 +34,8 @@
         <enumeration id="verticalAnchor">0</enumeration>
         <boolean id="flipHorizontally">false</boolean>
         <boolean id="flipVertically">false</boolean>
+        <integer id="tileWidth">667</integer>
+        <integer id="tileHeight">375</integer>
       </attributes>
     </graphics>
     <motion>
