@@ -41,16 +41,6 @@
           </predicate>
         </condition>
       </conditions>
-      <behaviors>
-        <behavior id="id115078" class="ChangeAttributeAction" enabled="true">
-          <attributes>
-            <text id="name">Change Attribute</text>
-            <text id="bundleName">ChangeAttribute.behavior</text>
-            <text id="targetAttribute">game.attributes.id129170</text>
-            <text id="RHS">true</text>
-          </attributes>
-        </behavior>
-      </behaviors>
       <elseBehaviors />
     </behavior>
   </behaviors>
